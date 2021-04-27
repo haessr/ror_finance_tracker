@@ -2,7 +2,7 @@
 
 <div class="search-area">
   <h3>Search Stocks</h3>
-  <%= form_with url: '#', method: :get do |f| %>
+  <%= form_with url: search_stock_path, method: :get do |f| %>
     <div class="form-group row">
       <div class="col-sm-9 no-right-padding">
         <%= f.text_field :stock, placeholder: 'Stock ticker symbol', 
