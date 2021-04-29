@@ -58,4 +58,9 @@ class User < ApplicationRecord
     # self.friends --> references user instance
     !friends.where(id: id_of_friend).exists?
   end
+
+  def build_friendship(friend_id)
+    new_friendship = self.friendships.build(friend_id: friend_id)
+    new_friendship.save
+  end
 end
